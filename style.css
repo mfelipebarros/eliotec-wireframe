@@ -67,8 +67,8 @@ label{font-size:13px;color:var(--muted);display:block}
 .hd .dd>div a span:last-child:not(:first-child){font-size:12.5px;color:var(--muted)}
 .hd .dd>div a:hover{background:var(--bg)}
 .hd .dd{position:relative}
-.hd-cta{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff!important;text-decoration:none;border-radius:999px;padding:6px 8px 6px 20px;font-size:14.5px;font-weight:500;white-space:nowrap}
-.hd-cta i{width:38px;height:38px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.hd-cta{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff!important;text-decoration:none;border-radius:999px;padding:6px 6px 6px 20px;font-size:14.5px;font-weight:500;white-space:nowrap}
+.hd-cta i{width:38px;height:38px;border-radius:50%;background:transparent;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
 .hd-cta svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .mm{display:none;position:relative}
 .mm summary{padding:10px 16px;border-radius:999px;background:rgba(18,18,17,.06);font-size:14px!important}
@@ -91,7 +91,7 @@ label{font-size:13px;color:var(--muted);display:block}
 @media(max-width:520px){.ft-grid{grid-template-columns:1fr}.hero{min-height:88vh;border-radius:28px}.sec{padding:64px 0}}
 /* floating ticket button */
 .wa-float{display:inline-flex!important;align-items:center;gap:12px;min-height:56px!important;padding:6px 8px 6px 22px!important;background:var(--ink)!important;color:#fff!important;border-radius:999px!important;box-shadow:0 10px 30px rgba(18,18,17,.3)!important;font-family:Geist,system-ui,sans-serif!important;font-size:14.5px!important;font-weight:500!important;line-height:1.15;border:1px solid rgba(255,255,255,.18)}
-.wa-float::after{content:"";width:44px;height:44px;border-radius:50%;flex-shrink:0;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5h12v8H9l-3 3v-3H4z'/%3E%3Cpath d='M11 16h4l3 3v-3h2V9h-3'/%3E%3C/svg%3E") center/24px no-repeat}
+.wa-float::after{content:"";width:44px;height:44px;border-radius:50%;flex-shrink:0;position:relative;z-index:1;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5h12v8H9l-3 3v-3H4z'/%3E%3Cpath d='M11 16h4l3 3v-3h2V9h-3'/%3E%3C/svg%3E") center/24px no-repeat}
 @media(max-width:600px){.wa-float{right:10px!important;bottom:10px!important;font-size:13px!important;padding:5px 6px 5px 16px!important}.wa-float::after{width:38px;height:38px}}
 .hd details{padding:0!important;border:0!important}
 .hd .mm{margin-left:auto}
@@ -144,3 +144,15 @@ details[open]:not(.dd):not(.mm) summary::after{content:"–"}
 .pin span::after{content:"";position:absolute;inset:11px;border-radius:50%;background:#fff}
 .maplibregl-map{font-family:Geist,system-ui,sans-serif}.maplibregl-ctrl-top-left{margin:6px}
 .ico svg{width:24px;height:24px;fill:none;stroke:var(--red);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* hover: red circle expands to fill the whole button (same inset on all sides) */
+.hd-cta{position:relative}
+.hd-cta,.wa-float{overflow:hidden;isolation:isolate}
+.hd-cta::before,.wa-float::before{content:"";position:absolute;z-index:-1;right:6px;top:6px;bottom:6px;width:38px;border-radius:999px;background:var(--red);transition:width .45s cubic-bezier(.65,0,.25,1)}
+.wa-float::before{width:44px}
+.hd-cta>span,.wa-float{transition:color .3s ease .05s}
+.hd-cta>span{position:relative;z-index:1}
+.hd-cta:hover::before,.wa-float:hover::before{width:calc(100% - 12px)}
+.hd-cta:hover,.hd-top.on-dark .hd-cta:hover,.wa-float:hover{color:#fff!important}
+@media(max-width:600px){.wa-float::before{top:5px;bottom:5px;right:6px;width:38px}.wa-float:hover::before{width:calc(100% - 12px)}}
+@media(prefers-reduced-motion:reduce){.hd-cta::before,.wa-float::before{transition:none}}
