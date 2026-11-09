@@ -30,7 +30,8 @@ a{color:inherit}
 .card{background:var(--card)!important;border:1px solid var(--line)!important;border-radius:var(--r)!important;padding:14px 14px 24px!important;gap:10px!important;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(18,18,17,.08)}
 .card h3,.card p,.card .lnk{padding:0 10px}
-.card .ico{margin:10px 10px 0;background:rgba(215,25,32,.09) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d71920' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 19V5M5 12l7-7 7 7'/%3E%3C/svg%3E") center/22px no-repeat!important;border-radius:50%!important}
+.card .ico{margin:10px 10px 0;background:rgba(215,25,32,.09);border-radius:50%!important;display:flex;align-items:center;justify-content:center}
+.card .ico:empty{background:rgba(215,25,32,.09) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d71920' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 19V5M5 12l7-7 7 7'/%3E%3C/svg%3E") center/22px no-repeat!important;border-radius:50%!important}
 .img{border-radius:20px!important;background-color:#e4e2dc;color:#8a877e}
 .card .img{border-radius:18px!important}
 .g2,.g3,.g4{gap:20px!important}
@@ -143,3 +144,4 @@ details[open]:not(.dd):not(.mm) summary::after{content:"–"}
 .pin span{display:block;width:44px;height:44px;background:var(--red);border:3px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 6px 16px rgba(0,0,0,.3);position:relative}
 .pin span::after{content:"";position:absolute;inset:11px;border-radius:50%;background:#fff}
 .maplibregl-map{font-family:Geist,system-ui,sans-serif}.maplibregl-ctrl-top-left{margin:6px}
+.ico svg{width:24px;height:24px;fill:none;stroke:var(--red);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
