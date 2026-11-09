@@ -156,3 +156,6 @@ details[open]:not(.dd):not(.mm) summary::after{content:"–"}
 .hd-cta:hover,.hd-top.on-dark .hd-cta:hover,.wa-float:hover{color:#fff!important}
 @media(max-width:600px){.wa-float::before{top:5px;bottom:5px;right:6px;width:38px}.wa-float:hover::before{width:calc(100% - 12px)}}
 @media(prefers-reduced-motion:reduce){.hd-cta::before,.wa-float::before{transition:none}}
+/* GSAP helpers */
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+h1 .wi{display:inline-block;will-change:transform}
