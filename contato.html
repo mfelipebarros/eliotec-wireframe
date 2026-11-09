@@ -30,7 +30,7 @@ details.dd>summary svg{transition:transform .15s}
 details.dd[open]>summary svg{transform:rotate(180deg)}
 details.dd a:hover{background:#f2f2f2}
 </style>
-<style>.wa-float{position:fixed;right:20px;bottom:20px;display:flex;align-items:center;gap:14px;padding:10px 14px 10px 20px;background:#5b5b5b;color:#fff;border:3px solid #fff;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.35);z-index:9999;text-decoration:none;font-family:Poppins,system-ui,sans-serif;line-height:1.15;transition:transform .15s}.wa-float:hover{transform:scale(1.04);color:#fff}.wa-float span{display:block;font-size:15px;font-weight:300;text-align:right}.wa-float b{display:block;font-size:19px;font-weight:600}.wa-float i{width:48px;height:48px;border-radius:50%;background:#e02a1f;display:flex;align-items:center;justify-content:center;flex-shrink:0}.wa-float svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linejoin:round}@media(max-width:600px){.wa-float{right:10px;bottom:10px;padding:8px 10px 8px 14px;gap:10px}.wa-float span{font-size:12px}.wa-float b{font-size:15px}.wa-float i{width:40px;height:40px}.wa-float svg{width:23px;height:23px}}</style>
+<style>.wa-float{position:fixed;right:20px;bottom:20px;display:inline-flex;align-items:center;min-height:48px;padding:0 20px;background:#111;color:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:9999;text-decoration:none;font-family:Poppins,system-ui,sans-serif;font-size:15px;font-weight:500}.wa-float:hover{background:#333;color:#fff}@media(max-width:600px){.wa-float{right:10px;bottom:10px;font-size:14px;padding:0 16px}}</style>
 </head>
 <body>
 <div class="wf">
@@ -166,6 +166,6 @@ details.dd a:hover{background:#f2f2f2}
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') dds.forEach(function(d){d.open=false}) });
 })();
 </script>
-<a class="wa-float" href="https://api.whatsapp.com/send?phone=5511959313360&text=Ol%C3%A1%2C%20quero%20abrir%20um%20chamado%20t%C3%A9cnico." target="_blank" rel="noopener" aria-label="Abra aqui seu chamado técnico"><span>Abra aqui seu<b>chamado técnico</b></span><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h11v8H8l-3 3v-3H3z"/><path d="M10 15h5l3 3v-3h3v-8h-5"/></svg></i></a>
+<a class="wa-float" href="https://api.whatsapp.com/send?phone=5511959313360&text=Ol%C3%A1%2C%20quero%20abrir%20um%20chamado%20t%C3%A9cnico." target="_blank" rel="noopener">Abra aqui seu chamado técnico</a>
 </body>
 </html>
