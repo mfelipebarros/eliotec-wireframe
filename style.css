@@ -185,3 +185,9 @@ h1 .wi{display:inline-block;will-change:transform}
 .rv-nav{top:auto;bottom:0;transform:none}
 .rv-prev{left:calc(50% - 52px)}.rv-next{right:calc(50% - 52px)}
 @media(max-width:700px){.rv-prev{left:calc(50% - 52px)}.rv-next{right:calc(50% - 52px)}}
+/* region pages */
+.g4x{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))!important}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14.5px}
+.chip-more{background:transparent;border-style:dashed;color:var(--muted)}
+.split-text h2{max-width:520px}
