@@ -41,7 +41,7 @@
   });
 
   /* ---------- cards: staggered batches ---------- */
-  var cards = $('.card');
+  var cards = $('.card, .svc, .tile');
   if (cards.length) {
     gsap.set(cards, { y: 56, opacity: 0 });
     ScrollTrigger.batch(cards, {
