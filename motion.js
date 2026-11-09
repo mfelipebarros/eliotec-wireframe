@@ -63,7 +63,7 @@
   });
 
   /* ---------- text blocks, logos, map, form, footer ---------- */
-  $('.logos, .map, form, .sec:not(.hero):not(.intro) .ctas, .ft-grid').forEach(function (el) {
+  $('.logos, .rv-wrap, .map, form, .sec:not(.hero):not(.intro) .ctas, .ft-grid').forEach(function (el) {
     gsap.from(el, { y: 44, opacity: 0, duration: .9, ease: 'power3.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
   });
   $('details:not(.dd):not(.mm)').forEach(function (el, i) {

@@ -159,3 +159,20 @@ details[open]:not(.dd):not(.mm) summary::after{content:"–"}
 /* GSAP helpers */
 h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
 h1 .wi{display:inline-block;will-change:transform}
+
+/* testimonials (placeholder cards) */
+.rv-wrap{position:relative}
+.reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px}
+.reviews::-webkit-scrollbar{display:none}
+.rv{flex:0 0 min(310px,84%);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 20px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.rv-top{display:flex;align-items:center;gap:12px;width:100%}
+.rv-top strong{flex:1;text-align:left;font-weight:500;font-size:15px}
+.rv-av{width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:500}
+.rv-g{width:22px;height:22px}
+.rv-stars{display:flex;gap:2px}.rv-stars svg{width:20px;height:20px;fill:#fbbc04}
+.rv p{font-size:15px;line-height:1.55}
+.rv-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:0 6px 18px rgba(18,18,17,.12);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;padding:0}
+.rv-nav svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rv-nav:hover{background:var(--ink)}.rv-nav:hover svg{stroke:#fff}
+.rv-prev{left:-14px}.rv-next{right:-14px}
+@media(max-width:700px){.rv-prev{left:-6px}.rv-next{right:-6px}}
