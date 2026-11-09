@@ -5,7 +5,7 @@ html{scroll-behavior:smooth}
 body{background:var(--bg)!important}
 .wf{font-family:Geist,system-ui,sans-serif!important;color:var(--ink)!important;background:var(--bg)!important;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:Geist,system-ui,sans-serif;color:var(--ink);letter-spacing:-.035em}
-h1{font-size:clamp(38px,6vw,72px)!important;font-weight:300!important;line-height:1.02!important;margin:0 0 20px!important}
+h1{font-size:clamp(34px,4.8vw,58px)!important;font-weight:300!important;line-height:1.02!important;margin:0 0 20px!important}
 h2{font-size:clamp(30px,4vw,48px)!important;font-weight:300!important;line-height:1.08!important}
 h3{font-size:19px!important;font-weight:500!important;letter-spacing:-.02em}
 p{color:var(--muted)!important;font-size:16px;line-height:1.6}
