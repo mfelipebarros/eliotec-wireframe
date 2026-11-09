@@ -117,3 +117,7 @@ details[open]:not(.dd):not(.mm) summary::after{content:"–"}
 .hd-top.on-dark .mm summary{background:rgba(255,255,255,.14);color:#fff}
 .hd-fixed{transform:translateY(-140%);opacity:0;visibility:hidden;transition:transform .3s ease,opacity .3s ease,visibility 0s .3s}
 .hd-fixed.show{transform:none;opacity:1;visibility:visible;transition:transform .3s ease,opacity .3s ease,visibility 0s}
+/* hero nav aligns with hero content */
+.hd-top{top:30px;left:12px;right:12px;padding:0 36px}
+.hd-top .hd-in{max-width:none;padding-right:0}
+@media(max-width:900px){.hd-top{padding:0 22px}}
