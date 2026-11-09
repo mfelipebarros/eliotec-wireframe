@@ -44,7 +44,42 @@ details.dd a:hover{background:#f2f2f2}
 </head>
 <body>
 <div class="wf">
-<header class="hd"><div class="hd-in">
+<header class="hd hd-top"><div class="hd-in">
+<a class="hd-logo" href="index.html" aria-label="Eliotec Elevadores — início"><img src="logo.png" alt="Eliotec Elevadores" width="128" height="42"></a>
+<nav aria-label="Principal">
+<details class="dd"><summary>Serviços <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></summary>
+<div>
+<a href="conserto-24h.html"><span>Conserto de elevador 24h</span><span>Elevador parado, quebrado ou com pessoas presas</span></a>
+<a href="manutencao.html"><span>Manutenção corretiva e preventiva</span><span>Reparos e contrato de manutenção</span></a>
+<a href="modernizacao.html"><span>Modernização e reforma</span><span>Atualização de elevadores antigos</span></a>
+<a href="carga-e-monta-carga.html"><span>Elevador de carga e monta-carga</span><span>Restaurantes, comércio e indústria</span></a>
+</div></details>
+<details class="dd"><summary>Equipamentos novos <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></summary>
+<div>
+<a href="equipamentos-novos.html">Elevador residencial</a>
+<a href="equipamentos-novos.html">Elevador predial e comercial</a>
+<a href="equipamentos-novos.html">Elevador de carga</a>
+<a href="equipamentos-novos.html">Monta-carga</a>
+<a href="equipamentos-novos.html">Plataforma de acessibilidade</a>
+<a href="equipamentos-novos.html"><span><b>Ver todos os equipamentos</b></span></a>
+</div></details>
+<details class="dd"><summary>Regiões <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></summary>
+<div>
+<a href="regioes.html">São Paulo</a>
+<a href="regioes.html">Santo André</a>
+<a href="regioes.html">São Bernardo do Campo</a>
+<a href="regioes.html">São Caetano do Sul</a>
+<a href="regioes.html">Diadema</a>
+<a href="regioes.html">Guarulhos</a>
+<a href="regioes.html"><span><b>Ver todas as regiões</b></span></a>
+</div></details>
+<a href="sobre.html">Sobre</a>
+<a href="contato.html">Contato</a>
+</nav>
+<details class="mm"><summary>Menu</summary><div><a href="conserto-24h.html">Conserto 24h</a><a href="manutencao.html">Manutenção</a><a href="modernizacao.html">Modernização</a><a href="carga-e-monta-carga.html">Carga e monta-carga</a><a href="equipamentos-novos.html">Equipamentos novos</a><a href="regioes.html">Regiões</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></div></details>
+<a class="hd-cta" href="conserto-24h.html"><span>Elevador parado? Conserto 24h</span><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></i></a>
+</div></header>
+<header class="hd hd-fixed" ><div class="hd-in">
 <a class="hd-logo" href="index.html" aria-label="Eliotec Elevadores — início"><img src="logo.png" alt="Eliotec Elevadores" width="128" height="42"></a>
 <nav aria-label="Principal">
 <details class="dd"><summary>Serviços <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></summary>
@@ -186,9 +221,11 @@ details.dd a:hover{background:#f2f2f2}
 </script>
 <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511959313360&text=Ol%C3%A1%2C%20quero%20abrir%20um%20chamado%20t%C3%A9cnico." target="_blank" rel="noopener">Abra aqui seu chamado técnico</a>
 <script>
-(function(){var h=document.querySelector('.hd');if(!h)return;var dark=!!document.querySelector('.hero');
-function u(){var top=window.scrollY<24;h.classList.toggle('top',top);h.classList.toggle('on-dark',top&&dark)}
-u();window.addEventListener('scroll',u,{passive:true});})();
+(function(){var t=document.querySelector('.hd-top'),f=document.querySelector('.hd-fixed');if(!t||!f)return;
+if(document.querySelector('.hero'))t.classList.add('on-dark');
+var el=t.querySelector('.hd-in');
+if('IntersectionObserver' in window){new IntersectionObserver(function(e){f.classList.toggle('show',!e[0].isIntersecting)}).observe(el)}
+else{window.addEventListener('scroll',function(){f.classList.toggle('show',window.scrollY>120)},{passive:true})}})();
 </script>
 </body>
 </html>
