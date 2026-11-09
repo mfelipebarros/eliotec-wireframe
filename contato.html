@@ -34,6 +34,7 @@ details.dd[open]>summary svg{transform:rotate(180deg)}
 details.dd a:hover{background:#f2f2f2}
 </style>
 <style>.wa-float{position:fixed;right:20px;bottom:20px;display:inline-flex;align-items:center;min-height:48px;padding:0 20px;background:#111;color:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:9999;text-decoration:none;font-family:Poppins,system-ui,sans-serif;font-size:15px;font-weight:500}.wa-float:hover{background:#333;color:#fff}@media(max-width:600px){.wa-float{right:10px;bottom:10px;font-size:14px;padding:0 16px}}</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -120,7 +121,11 @@ details.dd a:hover{background:#f2f2f2}
 <div><h3>WhatsApp</h3><p><a href="https://api.whatsapp.com/send?phone=5511959313360">(11) 95931-3360</a></p></div>
 <div><h3>Endereço</h3><p>R. Aílson Simões, 143 — Cupecê, São Paulo — SP, 04652-228</p></div>
 <div><h3>Atendimento</h3><p>Plantão técnico 24 horas, 7 dias por semana</p></div>
-<div class="img" style="height: 220px">Mapa</div>
+<div class="map" style="height:320px">
+<div id="eliomap" role="region" aria-label="Mapa da sede da Eliotec"></div>
+<div class="map-card"><strong>Eliotec Elevadores</strong><span>R. Aílson Simões, 143 — Cupecê, São Paulo</span>
+<a class="btn btn-p" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20A%C3%ADlson%20Sim%C3%B5es%2C%20143%2C%20S%C3%A3o%20Paulo%20-%20SP" target="_blank" rel="noopener">Traçar rota no Google Maps</a></div>
+</div>
 </div>
 <form style="flex: 1 1 520px; min-width: 0; border: 1px solid #ddd; border-radius: 8px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; align-content: start">
 <label>Nome<input type="text"></label>
@@ -183,6 +188,15 @@ if(document.querySelector('.hero'))t.classList.add('on-dark');
 var el=t.querySelector('.hd-in');
 if('IntersectionObserver' in window){new IntersectionObserver(function(e){f.classList.toggle('show',!e[0].isIntersecting)}).observe(el)}
 else{window.addEventListener('scroll',function(){f.classList.toggle('show',window.scrollY>120)},{passive:true})}})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<script>
+(function(){var el=document.getElementById('eliomap');if(!el||!window.maplibregl)return;
+var p=[-46.6693,-23.6628];
+var m=new maplibregl.Map({container:el,style:'https://tiles.openfreemap.org/styles/positron',center:p,zoom:14.6,cooperativeGestures:true,attributionControl:{compact:true}});
+m.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-left');
+var pin=document.createElement('div');pin.className='pin';pin.innerHTML='<span></span>';pin.title='Eliotec Elevadores';
+new maplibregl.Marker({element:pin,anchor:'bottom'}).setLngLat(p).addTo(m);})();
 </script>
 </body>
 </html>
