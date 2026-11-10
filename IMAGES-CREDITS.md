@@ -1,6 +1,47 @@
 # Fontes das imagens (embutidas em base64 nas páginas)
 
-Fotos do Pexels e Unsplash (licenças gratuitas, uso comercial permitido, atribuição não obrigatória).
+Cada imagem é uma classe `.ph-*` definida no bloco `<style>` da própria página.
+
+## 1. Imagens geradas por IA (Magnific)
+
+Geradas em novembro de 2026 com o Google Nano Banana 2.1 via Magnific, em 2k, e comprimidas para JPEG antes de embutir. Cenas originais, sem pessoas reais identificáveis nem logotipos de terceiros. Nas fotos de técnicos, a foto da equipe da Eliotec (`.ph-team`, em `sobre.html`) foi usada apenas como referência do uniforme. O logo "ELIOTEC" nessas imagens é gerado por IA e é aproximado.
+
+| Classe | Onde | Cena |
+|---|---|---|
+| `.ph-hero` | Início (hero) | Elevador panorâmico de vidro em hall claro |
+| `.ph-res` | Início, Manutenção, Equipamentos novos | Hall residencial com tijolinho, madeira e porta de aço escovado |
+| `.ph-com` | Início, Manutenção, Equipamentos novos, Sobre | Lobby comercial com elevadores de inox |
+| `.ph-ind` | Início, Manutenção, Equipamentos novos, Carga | Elevador de carga em galpão industrial |
+| `.ph-carga` | Equipamentos novos, Carga | Monta-carga em doca de logística |
+| `.ph-manut` | Início, Manutenção | Técnico uniformizado na casa de máquinas |
+| `.ph-s24h` | Conserto 24h | Técnico atendendo chamado de emergência |
+| `.ph-modern` | Modernização | Cabine modernizada com botoeira digital |
+| `.ph-novos` | Equipamentos novos | Cabine nova de aço e LED |
+
+Geradas e aprovadas, mas ainda sem uso no site: elevador hospitalar (corredor claro com elevador de maca).
+
+## 2. Fotos das cidades (páginas de região)
+
+| Classe | Página | Origem | Licença |
+|---|---|---|---|
+| `.ph-sa` | Santo André | Wikimedia Commons, "Passarela Luso-Brasileira Américo Pinto Serra", de Igor Eliezer Borges | CC BY-SA 4.0 |
+| `.ph-sbc` | São Bernardo do Campo | Wikimedia Commons, "Visão Panorâmica de São Bernardo do Campo", de Jhlimones | CC BY-SA 4.0 |
+| `.ph-sp` | São Paulo | Ponte Estaiada. **Origem e licença a confirmar.** | ? |
+| `.ph-gru` | Guarulhos | Ponte "Cidade de Guarulhos" (arquivo com o nome de Viviane Giacometti). **Origem e licença a confirmar.** | ? |
+| `.ph-dia` | Diadema | Vista aérea do centro. **Origem e licença a confirmar.** | ? |
+| `.ph-scs` | São Caetano do Sul | Vista aérea de prédios residenciais. **Origem e licença a confirmar.** | ? |
+
+A licença CC BY-SA exige crédito ao autor e à licença. Este arquivo cumpre a atribuição para as duas fotos da Commons, e os links das páginas de origem estão em commons.wikimedia.org/wiki/File:Passarela_Luso-Brasileira_Américo_Pinto_Serra.jpg e commons.wikimedia.org/wiki/File:Visão_Panorâmica_de_São_Bernardo_do_Campo.jpg.
+
+## 3. Fotos de banco de imagens (Pexels e Unsplash)
+
+Licenças gratuitas, uso comercial permitido, atribuição não obrigatória. Ainda em uso nas classes `.ph-C`, `.ph-D`, `.ph-F`, `.ph-G`, `.ph-H`, `.ph-J`, `.ph-K`, `.ph-L`, `.ph-M`, `.ph-N`, `.ph-O` e `.ph-P`.
 
 Pexels: pexels.com/photo/32751915 , 8453040 , 35290678 , 29491402 , 6375553 , 4487383
 Unsplash: photo-1592256410394-51c948ec13d5 , 1547630824-eed1be6a27b0 , 1566096650255-98ba2641071e , 1565417814737-6b4097de8a3a , 1562654501-9a587e8638d8 , 1719463814218-52e17f720e8a , 1573358575417-a421c842be5a , 1585293878107-569e3ebdab53 , 1758448721149-aa0ce8e1b2c9 , 1596711684682-2f3ea5d2d739
+
+Nota: parte dessas fotos foi substituída pelas imagens da seção 1 (classes `.ph-A`, `.ph-B`, `.ph-E`, `.ph-I`, além de usos pontuais de `.ph-C`, `.ph-D`, `.ph-F`, `.ph-G`, `.ph-K` e `.ph-O`). A lista acima ainda não foi separada por foto, então pode incluir IDs que já não aparecem no site.
+
+## 4. Fotos do time e da frota
+
+`.ph-team` e `.ph-fleet` (página Sobre): fotos próprias da Eliotec.
