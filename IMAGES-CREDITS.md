@@ -17,6 +17,11 @@ Geradas em novembro de 2026 com o Google Nano Banana 2.1 via Magnific, em 2k, e 
 | `.ph-s24h` | Conserto 24h | Técnico atendendo chamado de emergência |
 | `.ph-modern` | Modernização | Cabine modernizada com botoeira digital |
 | `.ph-novos` | Equipamentos novos | Cabine nova de aço e LED |
+| `.ph-acc` | Início, Equipamentos novos | Plataforma elevatória de acessibilidade na entrada de um prédio |
+| `.ph-casa` | Início, Manutenção | Elevador residencial de vidro ao lado de escada de madeira |
+| `.av-*` (6) | Início, depoimentos | Rostos de IA (Ricardo, Camila, Eduardo, Sônia, Fábio, Juliana), 112 px |
+
+**Aviso sobre os depoimentos:** os seis depoimentos da página inicial são de exemplo (nomes e textos fictícios, como indica o comentário no `index.html`), e os rostos são gerados por IA. Substituir por depoimentos e fotos reais antes de publicar o site.
 
 Geradas e aprovadas, mas ainda sem uso no site: elevador hospitalar (corredor claro com elevador de maca).
 

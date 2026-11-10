@@ -168,6 +168,7 @@ h1 .wi{display:inline-block;will-change:transform}
 .rv-top{display:flex;align-items:center;gap:12px;width:100%}
 .rv-top strong{flex:1;text-align:left;font-weight:500;font-size:15px}
 .rv-av{width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:500}
+.rv-av[class*="av-"]{background-size:cover;background-position:center;background-repeat:no-repeat;flex:none}
 .rv-g{width:22px;height:22px}
 .rv-stars{display:flex;gap:2px}.rv-stars svg{width:20px;height:20px;fill:#fbbc04}
 .rv p{font-size:15px;line-height:1.55}
