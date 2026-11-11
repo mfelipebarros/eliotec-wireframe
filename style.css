@@ -219,3 +219,10 @@ h1 .wi{display:inline-block;will-change:transform}
 .faq details p{padding:0 28px 26px;max-width:64ch}
 @media(max-width:900px){.split2,.split2.rev{grid-template-columns:1fr;gap:36px}.split2.rev .split2-side{order:0}.split2.rev .tiles{order:1}.split2-side{position:static}.tiles{grid-template-columns:1fr}.tile{min-height:0}}
 .svc .ico{width:48px;height:48px;border-radius:50%!important;background:rgba(215,25,32,.09);display:flex;align-items:center;justify-content:center}
+
+/* Acessibilidade */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px;font-weight:500;text-decoration:none;transition:top .15s}
+.skip-link:focus{top:12px}
+main:focus{outline:none}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.ft a:focus-visible,.hero a:focus-visible,.on-dark a:focus-visible,.wa-float:focus-visible{outline-color:#fff;box-shadow:0 0 0 5px var(--ink)}

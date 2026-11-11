@@ -1,6 +1,6 @@
-# Fontes das imagens (embutidas em base64 nas páginas)
+# Fontes das imagens
 
-Cada imagem é uma classe `.ph-*` definida no bloco `<style>` da própria página.
+As imagens ficam em `assets/img/` (WebP, fundos das classes `.ph-*` e avatares `.av-*`, definidas no bloco `<style>` de cada página) e `assets/logos/` (logos de clientes). O nome do arquivo é o da classe sem o prefixo `ph-`, por exemplo `.ph-hero` é `assets/img/hero.webp`.
 
 ## 1. Imagens geradas por IA (Magnific)
 
